@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="bill_amount">Bill Amount</string>
+    <string name="hint">Enter the Bill Amount</string>
+    <string name="service_rating">Service Rating</string>
+    <string name="Tip_percent">%s%Tip Percent</string>
+    <string name="Tip_total">$%sTip Total</string>
+    <string name="total_bill">Bill Total</string>
+    <string name="Result">$%s</string>
+    <string name="des">sd</string>
+
+</resources>

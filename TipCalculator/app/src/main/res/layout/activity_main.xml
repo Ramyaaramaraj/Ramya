@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbackground"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/billamount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="11dp"
+        android:text="@string/bill_amount"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        />
+    <EditText
+        android:id="@+id/enteredbill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="41dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/hint"
+        android:textColor="@color/colorText"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColorHint="@color/colorSeparators"
+        android:gravity="center"
+        android:background="@android:color/transparent"/>
+
+    <View
+        android:id="@+id/separator1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/enteredbill"
+        android:layout_marginTop="@dimen/vertical_margin"  android:background="@color/colorSeparators"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/Ratingbuttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/vertical_margin"
+        android:layout_below="@id/separator1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/rating1"
+            android:src="@drawable/emoticon_neutral"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/image_button"
+            android:layout_weight="1"
+            android:contentDescription="@string/des"
+            android:background="@color/colorbackground"/>
+
+        <ImageButton
+            android:id="@+id/rating2"
+            android:src="@drawable/emoticon_happy"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/image_button"
+            android:layout_weight="1"
+            android:contentDescription="@string/des"
+            android:background="@color/colorbackground"/>
+
+        <ImageButton
+            android:id="@+id/rating3"
+            android:src="@drawable/emoticon_excited"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/image_button"
+            android:layout_weight="1"
+            android:contentDescription="@string/des"
+            android:background="@color/colorbackground"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/Ratingbuttons"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:background="@color/colorSeparators"
+
+        />
+    <TextView
+        android:id="@+id/servicerating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/service_rating"
+        android:textColor="@color/colorText"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@id/separator2"
+        android:layout_marginTop="@dimen/vertical_margin"/>
+
+    <LinearLayout
+        android:id="@+id/tipinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/vertical_margin"
+        android:layout_below="@id/servicerating"
+        android:orientation="horizontal"
+        android:divider="?android:dividerHorizontal"
+        android:layout_marginTop="@dimen/horizontal_margin"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/tippercent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorText"
+            android:layout_marginTop="@dimen/horizontal_margin"
+            android:text="@string/Tip_percent"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tiptotal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorText"
+            android:gravity="center"
+            android:text="@string/Tip_total"
+            android:layout_marginTop="@dimen/horizontal_margin"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/separator3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/tipinfo"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:background="@color/colorSeparators"
+
+        />
+    <TextView
+        android:id="@+id/totalbill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorText"
+        android:gravity="center"
+        android:layout_below="@id/separator3"
+        android:text="@string/bill_amount"
+        android:layout_marginTop="@dimen/horizontal_margin"
+        />
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorText"
+        android:gravity="center"
+        android:layout_below="@id/totalbill"
+        android:text="@string/Result"
+        android:layout_marginTop="@dimen/horizontal_margin"
+        />
+
+
+
+</RelativeLayout>
