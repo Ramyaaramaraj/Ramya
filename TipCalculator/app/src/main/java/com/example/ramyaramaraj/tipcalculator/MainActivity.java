@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 t2.setText("$" +r1.toString()+" Tip Total");
                 Double a=Double.parseDouble(s1);
                 Double output=a+r1;
+                
                 t3.setText("$"+output);
             }
         });
